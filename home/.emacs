@@ -19,6 +19,8 @@
  version-control t)
 (require 'linum-relative)
 (global-linum-mode)
+(require 'indent-guide)
+(indent-guide-global-mode)
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
@@ -38,7 +40,7 @@
  '(mode-require-final-newline t)
  '(package-selected-packages
    (quote
-    (linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
+    (indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
