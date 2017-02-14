@@ -14,15 +14,17 @@
 (setq
  backup-by-copying t
  delete-old-versions t
- kept-new-versions 6
+ Kept-new-versions 6
  kept-old-versions 2
  version-control t)
-
+(require 'linum-relative)
+(global-linum-mode)
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -36,7 +38,7 @@
  '(mode-require-final-newline t)
  '(package-selected-packages
    (quote
-    (helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
+    (linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
