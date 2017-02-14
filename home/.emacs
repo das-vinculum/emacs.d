@@ -21,7 +21,7 @@
  '(custom-enabled-themes (quote (tsdh-dark)))
  '(package-selected-packages
    (quote
-    (projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm))))
+    (yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
