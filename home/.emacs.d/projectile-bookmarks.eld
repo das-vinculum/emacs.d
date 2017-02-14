@@ -1,1 +1,1 @@
-("~/repositories/b2b-purchase-order-app/" "~/" "~/.homesick/repos/emacs/" "~/repositories/k8s-rabbitmq-privileges/" "~/repositories/transactional-mailing-silo/")
+("~/repositories/cloud-infrastructure/" "~/repositories/green-checkout-silo/" "~/.homesick/repos/emacs/" "~/" "~/repositories/b2b-purchase-order-app/" "~/repositories/k8s-rabbitmq-privileges/" "~/repositories/transactional-mailing-silo/")
