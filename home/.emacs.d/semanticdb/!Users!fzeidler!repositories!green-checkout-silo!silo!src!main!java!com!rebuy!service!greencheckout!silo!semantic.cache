@@ -1,0 +1,35 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode jdee-mode
+      :tags 
+        '( ("com.rebuy.service.greencheckout.silo" package nil nil [1 46])
+            ("org.springframework.boot.autoconfigure.SpringBootApplication" include nil nil [48 116])
+            ("org.springframework.boot.builder.SpringApplicationBuilder" include nil nil [117 182])
+            ("org.springframework.boot.context.properties.EnableConfigurationProperties" include nil nil [183 264])
+            ("org.springframework.data.jpa.repository.config.EnableJpaRepositories" include nil nil [265 341])
+            ("Application" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [510 523]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [486 639]))                  
+                :type "class")
+                nil [455 641]))          
+      :file "Application.java"
+      :pointmax 642
+      :fsize 641
+      :lastmodtime '(22690 60227 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!fzeidler!repositories!green-checkout-silo!silo!src!main!java!com!rebuy!service!greencheckout!silo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
