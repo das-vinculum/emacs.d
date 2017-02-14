@@ -10,6 +10,7 @@
 (require 'helm-config)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (setq ns-right-alternate-modifier nil)
+(projectile-global-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,7 +21,7 @@
  '(custom-enabled-themes (quote (tsdh-dark)))
  '(package-selected-packages
    (quote
-    (evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm))))
+    (projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
