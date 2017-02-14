@@ -30,7 +30,8 @@
 (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
+(require 'powerline-evil)
+(powerline-evil-vim-color-theme)
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -51,7 +52,7 @@
  '(mode-require-final-newline t)
  '(package-selected-packages
    (quote
-    (dired+ exec-path-from-shell git-gutter auto-complete indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
+    (powerline powerline-evil dired+ exec-path-from-shell git-gutter auto-complete indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
