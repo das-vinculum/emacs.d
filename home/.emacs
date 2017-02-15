@@ -59,7 +59,7 @@
  '(mode-require-final-newline t)
  '(package-selected-packages
    (quote
-    (ample-theme powerline powerline-evil dired+ exec-path-from-shell git-gutter auto-complete indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
+    (dockerfile-mode ample-theme powerline powerline-evil dired+ exec-path-from-shell git-gutter auto-complete indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
