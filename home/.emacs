@@ -12,7 +12,10 @@
 (evil-mode 1)
 (require 'helm-config)
 (global-set-key (kbd "M-x") 'helm-M-x)
-(setq ns-right-alternate-modifier nil)
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
 (projectile-global-mode)
 (ac-config-default)
 (setq
