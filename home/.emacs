@@ -16,6 +16,7 @@
 (setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
+(show-paren-mode 1)
 (projectile-global-mode)
 (ac-config-default)
 (setq
