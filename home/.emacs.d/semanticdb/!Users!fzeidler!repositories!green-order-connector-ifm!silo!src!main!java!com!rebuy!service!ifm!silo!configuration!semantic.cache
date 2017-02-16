@@ -1,0 +1,45 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode jdee-mode
+      :tags 
+        '( ("com.rebuy.service.ifm.silo.configuration" package nil nil [1 50])
+            ("com.rebuy.consul.ConsulService" include nil nil [52 90])
+            ("com.rebuy.consul.listeners.ContextClosedEventListener" include nil nil [91 152])
+            ("com.rebuy.consul.listeners.ContextStoppedEventListener" include nil nil [153 215])
+            ("com.rebuy.consul.listeners.EmbeddedServletContainerInitializedEventListener" include nil nil [216 299])
+            ("org.springframework.beans.factory.annotation.Autowired" include nil nil [300 362])
+            ("org.springframework.context.annotation.Bean" include nil nil [363 414])
+            ("org.springframework.context.annotation.Configuration" include nil nil [415 475])
+            ("org.springframework.context.annotation.Profile" include nil nil [476 530])
+            ("ConsulConfiguration" type
+               (:members 
+                  ( ("consulService" variable
+                       (:typemodifiers ("private")
+                        :type "ConsulService")
+                        (reparse-symbol class_member_declaration) [646 682])
+                    ("contextClosedEventListener" function
+                       (:typemodifiers ("public")
+                        :type "ContextClosedEventListener")
+                        (reparse-symbol class_member_declaration) [698 834])
+                    ("contextStoppedEventListener" function
+                       (:typemodifiers ("public")
+                        :type "ContextStoppedEventListener")
+                        (reparse-symbol class_member_declaration) [850 989])
+                    ("embeddedServletContainerInitializedEventListener" function
+                       (:typemodifiers ("public")
+                        :type "EmbeddedServletContainerInitializedEventListener")
+                        (reparse-symbol class_member_declaration) [1005 1207]))                  
+                :type "class")
+                nil [599 1209]))          
+      :file "ConsulConfiguration.java"
+      :pointmax 1210
+      :fsize 1209
+      :lastmodtime '(22692 13404 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!fzeidler!repositories!green-order-connector-ifm!silo!src!main!java!com!rebuy!service!ifm!silo!configuration!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
