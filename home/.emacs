@@ -46,9 +46,17 @@
       `((".*" ,temporary-file-directory t)))
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
- (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
+(add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 (eval-after-load "go-mode"
   '(require 'flymake-go))
+
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -62,7 +70,7 @@
  '(mode-require-final-newline t)
  '(package-selected-packages
    (quote
-    (flymake-go flymake-puppet godoctor go-complete go-rename go-autocomplete go-mode terraform-mode puppet-mode dockerfile-mode ample-theme powerline powerline-evil dired+ exec-path-from-shell git-gutter auto-complete indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
+    (neotree nginx-mode flymake-go flymake-puppet godoctor go-complete go-rename go-autocomplete go-mode terraform-mode puppet-mode dockerfile-mode ample-theme powerline powerline-evil dired+ exec-path-from-shell git-gutter auto-complete indent-guide linum-relative helm-git-files helm-git-grep magit magithub helm-ag helm-ag-r helm-fuzzier helm-projectile jdee scala-mode yaml-mode projectile evil evil-args evil-cleverparens evil-ediff evil-matchit evil-surround helm)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
