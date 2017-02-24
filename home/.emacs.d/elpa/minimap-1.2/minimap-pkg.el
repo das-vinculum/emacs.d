@@ -1,0 +1,1 @@
+/Users/fzeidler/.homesick/repos/emacs/home/.emacs.d/elpa/minimap-1.2/minimap-pkg.el
