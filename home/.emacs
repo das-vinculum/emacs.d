@@ -5,9 +5,23 @@
 (package-initialize)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(load-theme 'ample t t)
-(load-theme 'ample-flat t t)
+(load-theme 'ample t t) (load-theme 'ample-flat t t)
 (load-theme 'ample-light t t)
+
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell (replace-regexp-in-string
+                          "[ \t\n]*$"
+                          ""
+                          (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq eshell-path-env path-from-shell) ; for eshell users
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+(when window-system (set-exec-path-from-shell-PATH))
+
+(setenv "GOPATH" "/Users/fzeidler/repositories/golang")
+(add-to-list 'exec-path "/Users/fzeidler/.go/bin/")
+
 (require 'evil)
 (evil-mode 1)
 (require 'helm-config)
@@ -47,6 +61,12 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
+(defun auto-complete-for-go ()
+(auto-complete-mode 1))
+(add-hook 'go-mode-hook 'auto-complete-for-go)
+
+(with-eval-after-load 'go-mode
+   (require 'go-autocomplete))
 (eval-after-load "go-mode"
   '(require 'flymake-go))
 
@@ -57,6 +77,22 @@
 (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+
+(defun my-go-mode-hook ()
+  ; Use goimports instead of go-fmt
+  (setq gofmt-command "goimports")
+  ; Call Gofmt before saving
+  (add-hook 'before-save-hook 'gofmt-before-save)
+  ; Customize compile command to run go build
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           "go build -v && go test -v && go vet"))
+  ; Godef jump key binding
+  (local-set-key (kbd "M-.") 'godef-jump)
+  (local-set-key (kbd "M-*") 'pop-tag-mark)
+)
+(add-hook 'go-mode-hook 'my-go-mode-hook)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
